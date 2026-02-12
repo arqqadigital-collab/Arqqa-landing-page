@@ -739,13 +739,13 @@ const ContactSection = () => {
     }
     setLoading(true);
     try {
-      console.log('Submitting contact form:', { name: fullName, phone: mobile, email, message });
+      console.log('Submitting contact form:', { full_name: fullName, mobile, email, message });
       const { error } = await supabase.from('contacts').insert({
-        name: fullName,
-        phone: mobile,
+        full_name: fullName,
+        mobile,
         email,
         message,
-      } as any);
+      });
       if (error) {
         console.error('Supabase insert error:', error);
         toast({ title: "Something went wrong", description: error.message, variant: "destructive" });
