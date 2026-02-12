@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue } from 'framer-motion';
+import ProjectPage from '@/components/ProjectPage';
+import { projectsData } from '@/data/projectsData';
 import { 
   CheckCircle2, 
   Globe, 
@@ -615,7 +617,7 @@ const CaseStudies = ({ onOpenProject }: { onOpenProject: (id: string) => void })
           {projects.map((p, i) => (
             <motion.div 
               key={i} 
-              onClick={() => p.id === 'lifelypets' && onOpenProject('lifelypets')}
+              onClick={() => onOpenProject(p.id)}
               className="relative h-[480px] group cursor-pointer rounded-[2rem] overflow-hidden border border-white/10" 
               whileHover={{ y: -5 }}
             >
@@ -623,11 +625,9 @@ const CaseStudies = ({ onOpenProject }: { onOpenProject: (id: string) => void })
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
               <div className="absolute inset-0 p-8 flex flex-col justify-between z-20">
                 <h3 className="text-3xl font-black text-white tracking-tight">{p.title}</h3>
-                {p.id === 'lifelypets' && (
-                  <div className="flex items-center gap-2 text-white/50 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
+                <div className="flex items-center gap-2 text-white/50 text-xs font-bold uppercase tracking-widest group-hover:text-white transition-colors">
                     Click to Explore <ArrowRight size={14} />
-                  </div>
-                )}
+                </div>
               </div>
               <div className="absolute inset-0 z-0 opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000 grayscale group-hover:grayscale-0">
                  <img src={p.img} alt={p.title} className="w-full h-full object-cover" />
@@ -806,6 +806,10 @@ const Index = () => {
 
         {view === 'lifelypets' && (
           <LifelyPetsPage key="lifely" onBack={() => setView('home')} />
+        )}
+
+        {Object.keys(projectsData).includes(view) && (
+          <ProjectPage key={view} data={projectsData[view]} onBack={() => setView('home')} />
         )}
       </AnimatePresence>
     </div>

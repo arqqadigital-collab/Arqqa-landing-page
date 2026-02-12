@@ -1,0 +1,165 @@
+import { ProjectPageData } from '@/components/ProjectPage';
+
+export const projectsData: Record<string, ProjectPageData> = {
+  starlight: {
+    titleLine1: "Starlight",
+    titleLine2: "Developments",
+    titleLine2Color: "purple",
+    subtitle: "Real Estate &",
+    subtitleHighlight: "Property Development",
+    paragraphs: [
+      "Starlight Developments is a forward-thinking real estate company focused on creating premium residential and commercial properties. Their vision demanded a digital presence that reflects the same level of sophistication and attention to detail found in their architectural projects.",
+      "The existing website lacked the visual impact needed to attract high-net-worth investors and buyers. The user experience didn't convey the luxury positioning of the brand, and lead generation was underperforming against industry benchmarks.",
+      "ARQQA Agency was brought in to redesign and develop a high-end digital experience that positions Starlight Developments as a market leader—combining immersive visuals with strategic conversion architecture."
+    ],
+    solutionItems: [
+      "Immersive Property Showcases",
+      "Investor-Focused UI Design",
+      "Interactive Floor Plans & Tours",
+      "Lead Generation Architecture"
+    ],
+    heroImage: "https://i.ibb.co/TxVqqSDt/starlight.png",
+    presentationImage: "https://i.ibb.co/TxVqqSDt/starlight.png",
+    tabletImage: "https://i.ibb.co/TxVqqSDt/starlight.png",
+    accentColor: "from-purple-600",
+    accentRgb: "147, 51, 234"
+  },
+  geidea: {
+    titleLine1: "Geidea",
+    titleLine2: "Payments",
+    titleLine2Color: "gray",
+    subtitle: "Fintech &",
+    subtitleHighlight: "Payment Solutions",
+    paragraphs: [
+      "Geidea is a leading fintech company providing innovative payment solutions across the Middle East. Their technology powers thousands of merchants, and their digital platform needed to reflect the reliability and innovation at the core of their business.",
+      "The challenge was to create a digital experience that simplifies complex financial products while maintaining trust and security—key factors for merchants evaluating payment partners.",
+      "ARQQA Agency partnered with Geidea to build a conversion-optimized platform that communicates technological leadership while driving merchant sign-ups and partnership inquiries."
+    ],
+    solutionItems: [
+      "Enterprise-Grade UI System",
+      "Merchant Onboarding Flow",
+      "Product Comparison Architecture",
+      "Trust & Security Design Patterns"
+    ],
+    heroImage: "https://i.ibb.co/ds0R2JbH/geidea.png",
+    presentationImage: "https://i.ibb.co/ds0R2JbH/geidea.png",
+    tabletImage: "https://i.ibb.co/ds0R2JbH/geidea.png",
+    accentColor: "from-gray-500",
+    accentRgb: "107, 114, 128"
+  },
+  gts: {
+    titleLine1: "GTS",
+    titleLine2: "Holding",
+    titleLine2Color: "cyan",
+    subtitle: "Corporate &",
+    subtitleHighlight: "Investment Group",
+    paragraphs: [
+      "GTS Holding is a diversified investment group with interests spanning technology, infrastructure, and strategic acquisitions. Their corporate identity required a digital presence that communicates strength, vision, and institutional credibility.",
+      "The previous website failed to convey the scale and sophistication of the group's portfolio. Stakeholders and potential partners needed a clearer view of the group's structure, values, and investment philosophy.",
+      "ARQQA Agency was engaged to design and develop a corporate platform that positions GTS Holding as a premier investment group—balancing authority with accessibility."
+    ],
+    solutionItems: [
+      "Corporate Identity System",
+      "Portfolio Showcase Architecture",
+      "Stakeholder Communication Design",
+      "Scalable Multi-Entity Structure"
+    ],
+    heroImage: "https://i.ibb.co/d0MhVWx9/gts.png",
+    presentationImage: "https://i.ibb.co/d0MhVWx9/gts.png",
+    tabletImage: "https://i.ibb.co/d0MhVWx9/gts.png",
+    accentColor: "from-cyan-500",
+    accentRgb: "6, 182, 212"
+  },
+  banks: {
+    titleLine1: "Egyptian",
+    titleLine2: "Banks",
+    titleLine2Color: "indigo",
+    subtitle: "Banking &",
+    subtitleHighlight: "Financial Directory",
+    paragraphs: [
+      "Egyptian Banks is a comprehensive financial directory and resource platform serving the Egyptian banking sector. The platform aggregates banking products, rates, and services to help consumers make informed financial decisions.",
+      "The project required building a data-rich platform that remains user-friendly despite the complexity of financial information. Navigation, comparison tools, and trust signals were critical to user engagement.",
+      "ARQQA Agency developed a clean, authoritative platform that simplifies financial decision-making while maintaining the credibility expected in the banking industry."
+    ],
+    solutionItems: [
+      "Data-Rich UI Architecture",
+      "Financial Comparison Tools",
+      "Trust-First Design Language",
+      "SEO-Optimized Content Structure"
+    ],
+    heroImage: "https://i.ibb.co/v91Jk2J/banks.png",
+    presentationImage: "https://i.ibb.co/v91Jk2J/banks.png",
+    tabletImage: "https://i.ibb.co/v91Jk2J/banks.png",
+    accentColor: "from-indigo-500",
+    accentRgb: "99, 102, 241"
+  },
+  direct: {
+    titleLine1: "Direct",
+    titleLine2: "Group",
+    titleLine2Color: "violet",
+    subtitle: "Business &",
+    subtitleHighlight: "Services Conglomerate",
+    paragraphs: [
+      "Direct Group is a multi-service conglomerate offering solutions across logistics, technology, and business consulting. Their diverse portfolio demanded a unified digital identity that communicates professionalism across all verticals.",
+      "The challenge was creating a cohesive digital experience that serves multiple business units while maintaining a strong, unified brand presence. Each division needed its own space without fragmenting the overall identity.",
+      "ARQQA Agency designed a modular platform architecture that scales with the group's growth—ensuring each business unit shines while reinforcing the parent brand's authority."
+    ],
+    solutionItems: [
+      "Multi-Division Architecture",
+      "Unified Brand System",
+      "Service-Specific Landing Pages",
+      "Cross-Vertical Navigation Design"
+    ],
+    heroImage: "https://i.ibb.co/VpBCwpd2/direct.png",
+    presentationImage: "https://i.ibb.co/VpBCwpd2/direct.png",
+    tabletImage: "https://i.ibb.co/VpBCwpd2/direct.png",
+    accentColor: "from-violet-500",
+    accentRgb: "139, 92, 246"
+  },
+  clavigerme: {
+    titleLine1: "Claviger",
+    titleLine2: "Me",
+    titleLine2Color: "emerald",
+    subtitle: "Luxury &",
+    subtitleHighlight: "Concierge Services",
+    paragraphs: [
+      "Clavigerme is a premium concierge and lifestyle management service catering to high-net-worth individuals. Every touchpoint of their brand must exude exclusivity, discretion, and impeccable taste.",
+      "The digital presence needed to mirror the white-glove service experience their clients expect. Generic templates and standard web patterns were inadequate for the level of sophistication required.",
+      "ARQQA Agency crafted a bespoke digital experience that captures the essence of luxury concierge—using refined typography, restrained animations, and an interface that feels as curated as the services offered."
+    ],
+    solutionItems: [
+      "Luxury-First Visual Language",
+      "Membership Inquiry Architecture",
+      "Discreet & Elegant UI Patterns",
+      "Premium Content Presentation"
+    ],
+    heroImage: "https://i.ibb.co/qMQttB32/clavigerme.png",
+    presentationImage: "https://i.ibb.co/qMQttB32/clavigerme.png",
+    tabletImage: "https://i.ibb.co/qMQttB32/clavigerme.png",
+    accentColor: "from-emerald-500",
+    accentRgb: "16, 185, 129"
+  },
+  goalngo: {
+    titleLine1: "Goal",
+    titleLine2: "N Go",
+    titleLine2Color: "orange",
+    subtitle: "Sports &",
+    subtitleHighlight: "Entertainment Platform",
+    paragraphs: [
+      "GoalNGo is a dynamic sports and entertainment platform delivering real-time scores, news, and fan engagement experiences. The platform needed to capture the energy and excitement of live sports in every interaction.",
+      "Speed and real-time data were paramount. Users expect instant updates, and the interface needed to handle high-traffic moments without compromising performance or visual quality.",
+      "ARQQA Agency built a high-performance sports platform with real-time capabilities, dynamic content feeds, and an electrifying visual identity that keeps fans engaged and coming back."
+    ],
+    solutionItems: [
+      "Real-Time Data Architecture",
+      "High-Performance UI System",
+      "Fan Engagement Features",
+      "Dynamic Content Management"
+    ],
+    heroImage: "https://i.ibb.co/pj419n24/goalngo.png",
+    presentationImage: "https://i.ibb.co/pj419n24/goalngo.png",
+    tabletImage: "https://i.ibb.co/pj419n24/goalngo.png",
+    accentColor: "from-orange-500",
+    accentRgb: "249, 115, 22"
+  }
+};
