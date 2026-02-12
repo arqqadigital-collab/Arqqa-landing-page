@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue } from 'framer-motion';
 import ProjectPage from '@/components/ProjectPage';
 import { projectsData } from '@/data/projectsData';
-import { supabase } from '@/integrations/supabase/client';
-import { useToast } from '@/hooks/use-toast';
 import { 
   CheckCircle2, 
   Globe, 
@@ -724,43 +722,6 @@ const Testimonials = () => {
 };
 
 const ContactSection = () => {
-  const [fullName, setFullName] = useState('');
-  const [mobile, setMobile] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!fullName || !email) {
-      toast({ title: "Please fill in required fields", variant: "destructive" });
-      return;
-    }
-    setLoading(true);
-    try {
-      console.log('Submitting contact form:', { full_name: fullName, mobile, email, message });
-      const { error } = await supabase.from('contacts').insert({
-        full_name: fullName,
-        mobile,
-        email,
-        message,
-      });
-      if (error) {
-        console.error('Supabase insert error:', error);
-        toast({ title: "Something went wrong", description: error.message, variant: "destructive" });
-      } else {
-        toast({ title: "Message sent!", description: "We'll get back to you soon." });
-        setFullName(''); setMobile(''); setEmail(''); setMessage('');
-      }
-    } catch (err) {
-      console.error('Unexpected error:', err);
-      toast({ title: "Unexpected error", variant: "destructive" });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-32 relative overflow-hidden bg-black border-t border-white/5">
       <div className="container mx-auto px-6 relative z-10">
@@ -770,28 +731,32 @@ const ContactSection = () => {
           </div>
           <div className="w-full relative">
             <div className="p-8 md:p-12 rounded-[3rem] bg-white/[0.02] border border-white/10 shadow-2xl backdrop-blur-xl">
-              <form className="space-y-6" onSubmit={handleSubmit}>
+              <form className="space-y-6" action="https://formsubmit.co/info@arqqa.net" method="POST">
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" value="New Contact Form Submission" />
+                <input type="hidden" name="_next" value="/" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-3">
                     <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
-                    <input type="text" placeholder="John Doe" value={fullName} onChange={(e) => setFullName(e.target.value)} className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
+                    <input type="text" name="full_name" placeholder="John Doe" required className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
                   </div>
                   <div className="space-y-3">
                     <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Mobile Number</label>
-                    <input type="tel" placeholder="+1 (555) 000-0000" value={mobile} onChange={(e) => setMobile(e.target.value)} className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
+                    <input type="tel" name="mobile" placeholder="+1 (555) 000-0000" className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
                   </div>
                 </div>
                 <div className="space-y-3">
                   <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Work Email</label>
-                  <input type="email" placeholder="name@company.com" value={email} onChange={(e) => setEmail(e.target.value)} className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
+                  <input type="email" name="email" placeholder="name@company.com" required className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
                 </div>
                 <div className="space-y-3">
                     <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Message</label>
-                    <textarea rows={4} placeholder="Tell us about your project..." value={message} onChange={(e) => setMessage(e.target.value)} className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50 resize-none"></textarea>
+                    <textarea rows={4} name="message" placeholder="Tell us about your project..." className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50 resize-none"></textarea>
                 </div>
                 <div className="pt-6">
                   <PrimaryButton type="submit" className="w-full rounded-2xl py-5 uppercase font-black text-xs tracking-widest bg-gradient-to-r from-red-600 to-blue-600">
-                    {loading ? 'Sending...' : 'Book My Strategy Call'}
+                    Book My Strategy Call
                   </PrimaryButton>
                 </div>
               </form>
