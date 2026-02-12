@@ -721,6 +721,72 @@ const Testimonials = () => {
   );
 };
 
+const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const formData = new FormData(e.currentTarget);
+      const res = await fetch('https://formsubmit.co/ajax/info@arqqa.net', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData,
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        formRef.current?.reset();
+        setTimeout(() => setSubmitted(false), 4000);
+      } else {
+        console.error('FormSubmit error:', await res.text());
+      }
+    } catch (err) {
+      console.error('Submission failed:', err);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_subject" value="New Contact Form Submission" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-3">
+          <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
+          <input type="text" name="full_name" placeholder="John Doe" required className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
+        </div>
+        <div className="space-y-3">
+          <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Mobile Number</label>
+          <input type="tel" name="mobile" placeholder="+1 (555) 000-0000" className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
+        </div>
+      </div>
+      <div className="space-y-3">
+        <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Work Email</label>
+        <input type="email" name="email" placeholder="name@company.com" required className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
+      </div>
+      <div className="space-y-3">
+        <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Message</label>
+        <textarea rows={4} name="message" placeholder="Tell us about your project..." className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50 resize-none"></textarea>
+      </div>
+      {submitted && (
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-green-400 text-sm font-medium text-center py-2">
+          ✓ Message sent successfully!
+        </motion.div>
+      )}
+      <div className="pt-6">
+        <PrimaryButton type="submit" className="w-full rounded-2xl py-5 uppercase font-black text-xs tracking-widest bg-gradient-to-r from-red-600 to-blue-600">
+          {isSubmitting ? 'Sending...' : 'Book My Strategy Call'}
+        </PrimaryButton>
+      </div>
+    </form>
+  );
+};
+
 const ContactSection = () => {
   return (
     <section id="contact" className="py-32 relative overflow-hidden bg-black border-t border-white/5">
@@ -731,35 +797,7 @@ const ContactSection = () => {
           </div>
           <div className="w-full relative">
             <div className="p-8 md:p-12 rounded-[3rem] bg-white/[0.02] border border-white/10 shadow-2xl backdrop-blur-xl">
-              <form className="space-y-6" action="https://formsubmit.co/info@arqqa.net" method="POST">
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_subject" value="New Contact Form Submission" />
-                <input type="hidden" name="_next" value="/" />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
-                    <input type="text" name="full_name" placeholder="John Doe" required className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Mobile Number</label>
-                    <input type="tel" name="mobile" placeholder="+1 (555) 000-0000" className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Work Email</label>
-                  <input type="email" name="email" placeholder="name@company.com" required className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50" />
-                </div>
-                <div className="space-y-3">
-                    <label className="text-[10px] font-bold text-gray-500 uppercase tracking-widest ml-1">Message</label>
-                    <textarea rows={4} name="message" placeholder="Tell us about your project..." className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50 resize-none"></textarea>
-                </div>
-                <div className="pt-6">
-                  <PrimaryButton type="submit" className="w-full rounded-2xl py-5 uppercase font-black text-xs tracking-widest bg-gradient-to-r from-red-600 to-blue-600">
-                    Book My Strategy Call
-                  </PrimaryButton>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
