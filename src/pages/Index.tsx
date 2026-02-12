@@ -374,7 +374,7 @@ const ProcessGalaxy = () => {
 }
 
 // --- NEW PAGE: PROCESS TIMELINE ---
-const ProcessPage = ({ onBack }: { onBack: () => void }) => {
+const ProcessPage = ({ onBack, onBookCall }: { onBack: () => void; onBookCall: () => void }) => {
   const steps = [
     { id: 1, title: "Discovery Call", description: "We dive deep into your business goals, target audience, and current technical bottlenecks.", details: ["45-min Zoom Strategy Session", "KPI & Goal Definition", "Technical Feasibility Audit"], icon: MessageSquare },
     { id: 2, title: "Proposal & Roadmap", description: "We present a detailed scope of work, timeline, and investment required to achieve your goals.", details: ["Detailed Scope of Work (SOW)", "Project Roadmap Timeline", "Contract & Deposit"], icon: FileText },
@@ -431,8 +431,7 @@ const ProcessPage = ({ onBack }: { onBack: () => void }) => {
           </div>
           <div className="mt-32 text-center">
             <h3 className="text-3xl font-bold text-white mb-8">Ready to start Phase 01?</h3>
-            <PrimaryButton className="px-12 py-5 text-lg" onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}>Book Discovery Call</PrimaryButton>
-            <div id="final-cta" className="h-10" /> 
+            <PrimaryButton className="px-12 py-5 text-lg" onClick={onBookCall}>Book Discovery Call</PrimaryButton>
           </div>
         </div>
       </div>
@@ -845,7 +844,12 @@ const Index = () => {
         )}
         
         {view === 'process' && (
-          <ProcessPage key="process" onBack={() => setView('home')} />
+          <ProcessPage key="process" onBack={() => setView('home')} onBookCall={() => {
+            setView('home');
+            setTimeout(() => {
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }, 600);
+          }} />
         )}
 
         {view === 'lifelypets' && (
