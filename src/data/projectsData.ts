@@ -12,9 +12,15 @@ import gtsTablet from "@/assets/gts-tablet.png";
 import banksHero from "@/assets/banks-hero.png";
 import banksPresentation from "@/assets/banks-presentation.png";
 import banksTablet from "@/assets/banks-tablet.png";
-import directImg from "@/assets/direct.png";
-import clavigermeImg from "@/assets/clavigerme.png";
-import goalngoImg from "@/assets/goalngo.png";
+import directHero from "@/assets/direct-hero.png";
+import directPresentation from "@/assets/direct-presentation.png";
+import directTablet from "@/assets/direct-tablet.png";
+import clavigermeHero from "@/assets/clavigerme-hero.png";
+import clavigermePresentation from "@/assets/clavigerme-presentation.png";
+import clavigermeTablet from "@/assets/clavigerme-tablet.png";
+import goalngoHero from "@/assets/goalngo-hero.png";
+import goalngoPresentation from "@/assets/goalngo-presentation.png";
+import goalngoTablet from "@/assets/goalngo-tablet.png";
 
 export const projectsData: Record<string, ProjectPageData> = {
   starlight: {
@@ -130,9 +136,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: directImg,
-    presentationImage: directImg,
-    tabletImage: directImg,
+    heroImage: directHero,
+    presentationImage: directPresentation,
+    tabletImage: directTablet,
     accentColor: "from-violet-500",
     accentRgb: "139, 92, 246",
   },
@@ -154,9 +160,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: clavigermeImg,
-    presentationImage: clavigermeImg,
-    tabletImage: clavigermeImg,
+    heroImage: clavigermeHero,
+    presentationImage: clavigermePresentation,
+    tabletImage: clavigermeTablet,
     accentColor: "from-emerald-500",
     accentRgb: "16, 185, 129",
   },
@@ -178,9 +184,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Modern, Responsive Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: goalngoImg,
-    presentationImage: goalngoImg,
-    tabletImage: goalngoImg,
+    heroImage: goalngoHero,
+    presentationImage: goalngoPresentation,
+    tabletImage: goalngoTablet,
     accentColor: "from-orange-500",
     accentRgb: "249, 115, 22",
   },
