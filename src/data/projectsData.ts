@@ -1,5 +1,14 @@
 import { ProjectPageData } from "@/components/ProjectPage";
 
+import starlightImg from "@/assets/starlight.png";
+import geideaImg from "@/assets/geidea.png";
+import gtsHeroImg from "@/assets/gts-hero.png";
+import gtsImg from "@/assets/gts.png";
+import banksImg from "@/assets/banks.png";
+import directImg from "@/assets/direct.png";
+import clavigermeImg from "@/assets/clavigerme.png";
+import goalngoImg from "@/assets/goalngo.png";
+
 export const projectsData: Record<string, ProjectPageData> = {
   starlight: {
     titleLine1: "Starlight",
@@ -10,7 +19,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     paragraphs: [
       "Starlight Developments is a design-driven real estate developer with over three decades of experience, standing as a true pioneer of luxury living in Egypt. With a heartfelt vocation for creating architecturally refined, inspiring living spaces, the brand represents more than development—it represents vision, legacy, and design excellence.",
       "As a leader in the luxury real estate sector, Starlight required a website that could reflect its heritage, design philosophy, and premium positioning—while clearly communicating its projects to investors, partners, and high-end buyers.",
-      "ARQQA Agency was engaged to design and develop a sophisticated digital platform that translates Starlight Developments’ design-led DNA into a seamless, modern, and future-ready web experience.",
+      "ARQQA Agency was engaged to design and develop a sophisticated digital platform that translates Starlight Developments' design-led DNA into a seamless, modern, and future-ready web experience.",
     ],
     solutionItems: [
       "Strategic Content Structuring",
@@ -19,9 +28,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Premium User Experience (UX)",
       "Elegant Interface Design (UI)",
     ],
-    heroImage: "https://i.ibb.co/TxVqqSDt/starlight.png",
-    presentationImage: "https://i.ibb.co/TxVqqSDt/starlight.png",
-    tabletImage: "https://i.ibb.co/TxVqqSDt/starlight.png",
+    heroImage: starlightImg,
+    presentationImage: starlightImg,
+    tabletImage: starlightImg,
     accentColor: "from-purple-600",
     accentRgb: "147, 51, 234",
   },
@@ -43,9 +52,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Modern, Technology-Driven Interface (UI)",
       "Authority & Trust Framework",
     ],
-    heroImage: "https://i.ibb.co/ds0R2JbH/geidea.png",
-    presentationImage: "https://i.ibb.co/ds0R2JbH/geidea.png",
-    tabletImage: "https://i.ibb.co/ds0R2JbH/geidea.png",
+    heroImage: geideaImg,
+    presentationImage: geideaImg,
+    tabletImage: geideaImg,
     accentColor: "from-gray-500",
     accentRgb: "107, 114, 128",
   },
@@ -67,9 +76,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: "https://i.postimg.cc/6QPyW7Sq/GTS.png",
-    presentationImage: "https://i.ibb.co/d0MhVWx9/gts.png",
-    tabletImage: "https://i.ibb.co/d0MhVWx9/gts.png",
+    heroImage: gtsHeroImg,
+    presentationImage: gtsImg,
+    tabletImage: gtsImg,
     accentColor: "from-cyan-500",
     accentRgb: "6, 182, 212",
   },
@@ -90,9 +99,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Search & Discovery–Focused UX",
       "Functional, Trust-Oriented UI Design",
     ],
-    heroImage: "https://i.ibb.co/v91Jk2J/banks.png",
-    presentationImage: "https://i.ibb.co/v91Jk2J/banks.png",
-    tabletImage: "https://i.ibb.co/v91Jk2J/banks.png",
+    heroImage: banksImg,
+    presentationImage: banksImg,
+    tabletImage: banksImg,
     accentColor: "from-indigo-500",
     accentRgb: "99, 102, 241",
   },
@@ -114,9 +123,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: "https://i.ibb.co/VpBCwpd2/direct.png",
-    presentationImage: "https://i.ibb.co/VpBCwpd2/direct.png",
-    tabletImage: "https://i.ibb.co/VpBCwpd2/direct.png",
+    heroImage: directImg,
+    presentationImage: directImg,
+    tabletImage: directImg,
     accentColor: "from-violet-500",
     accentRgb: "139, 92, 246",
   },
@@ -129,7 +138,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     paragraphs: [
       "Claviger Middle East is a leading representation agency serving the hospitality, travel, and tourism sectors across the Middle East and Africa. With deep market expertise, regional networks, and a consultative sales model, Claviger helps independent and multinational hotel brands increase market share, drive revenue, and strengthen regional visibility.",
       "Despite having a strong service portfolio—including sales representation, marketing & PR, and asset management—their digital platform lacked the structure, clarity, and conversion focus needed to support demand generation and stakeholder engagement in key markets.",
-      "ARQQA Agency collaborated with Claviger Middle East to audit and redesign the website, developing a refined and performance-optimized platform that amplifies credibility, enhances user engagement, and supports lead generation across audiences. The work aligned the digital experience with Claviger’s premium service positioning and strategic business goals.",
+      "ARQQA Agency collaborated with Claviger Middle East to audit and redesign the website, developing a refined and performance-optimized platform that amplifies credibility, enhances user engagement, and supports lead generation across audiences. The work aligned the digital experience with Claviger's premium service positioning and strategic business goals.",
     ],
     solutionItems: [
       "Comprehensive Website Audit & UX Diagnostics",
@@ -138,9 +147,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: "https://i.ibb.co/qMQttB32/clavigerme.png",
-    presentationImage: "https://i.ibb.co/qMQttB32/clavigerme.png",
-    tabletImage: "https://i.ibb.co/qMQttB32/clavigerme.png",
+    heroImage: clavigermeImg,
+    presentationImage: clavigermeImg,
+    tabletImage: clavigermeImg,
     accentColor: "from-emerald-500",
     accentRgb: "16, 185, 129",
   },
@@ -162,9 +171,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Modern, Responsive Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: "https://i.ibb.co/pj419n24/goalngo.png",
-    presentationImage: "https://i.ibb.co/pj419n24/goalngo.png",
-    tabletImage: "https://i.ibb.co/pj419n24/goalngo.png",
+    heroImage: goalngoImg,
+    presentationImage: goalngoImg,
+    tabletImage: goalngoImg,
     accentColor: "from-orange-500",
     accentRgb: "249, 115, 22",
   },
