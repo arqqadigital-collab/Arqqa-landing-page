@@ -878,7 +878,7 @@ const CaseStudies = ({ onOpenProject }: { onOpenProject: (id: string) => void })
     {
       id: "banks",
       title: "Egyptianbanks",
-      img: "https://i.ibb.co/v91Jk2J/banks.png",
+      img: lifelypetsCard,
       color: "from-indigo-600 to-purple-900",
     },
     {
