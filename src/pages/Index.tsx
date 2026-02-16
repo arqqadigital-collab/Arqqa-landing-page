@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+import lifelypetsHero from '@/assets/lifelypets-hero.png';
+import lifelypetsPresentation from '@/assets/lifelypets-presentation.png';
+import lifelypetsTablet from '@/assets/lifelypets-tablet.png';
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue } from 'framer-motion';
 import ProjectPage from '@/components/ProjectPage';
 import { projectsData } from '@/data/projectsData';
@@ -106,7 +109,7 @@ const LifelyPetsPage = ({ onBack }: { onBack: () => void }) => {
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-red-600/40 blur-[150px] pointer-events-none" />
           <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[80%] h-[100px] bg-red-600/60 blur-[100px] rounded-full pointer-events-none" />
           <img 
-            src="https://res.cloudinary.com/dt87cttqs/image/upload/v1770545412/Screenshot_1447-08-18_at_4.35.19_PM_ttc3pw.png" 
+            src={lifelypetsHero} 
             alt="Lifelypets Hero Mockup" 
             className="w-full h-auto object-cover relative z-20 shadow-2xl"
           />
@@ -200,7 +203,7 @@ const LifelyPetsPage = ({ onBack }: { onBack: () => void }) => {
           className="relative z-30 w-full"
         >
           <img 
-            src="https://res.cloudinary.com/dt87cttqs/image/upload/v1770544181/07_ti3epw.png" 
+            src={lifelypetsPresentation} 
             alt="Lifely Pets Full Presentation" 
             className="w-full h-auto object-cover block shadow-[0_0_80px_rgba(220,38,38,0.15)]"
           />
@@ -223,7 +226,7 @@ const LifelyPetsPage = ({ onBack }: { onBack: () => void }) => {
           className="relative z-30 w-full"
         >
           <img 
-            src="https://res.cloudinary.com/dt87cttqs/image/upload/v1770545109/Urban_Tablet_Mockup_with_Shadow_Overlay_v1ebw1.png" 
+            src={lifelypetsTablet} 
             alt="Lifely Pets Urban Tablet Mockup" 
             className="w-full h-auto object-cover block brightness-90 contrast-110 shadow-[0_0_100px_rgba(220,38,38,0.2)]"
           />
