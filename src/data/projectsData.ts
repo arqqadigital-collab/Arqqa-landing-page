@@ -114,7 +114,7 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: "https://i.ibb.co/VpBCwpd2/direct.png",
+    heroImage: "https://ibb.co/zWTgp0bb",
     presentationImage: "https://i.ibb.co/VpBCwpd2/direct.png",
     tabletImage: "https://i.ibb.co/VpBCwpd2/direct.png",
     accentColor: "from-violet-500",
