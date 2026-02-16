@@ -47,7 +47,7 @@ const ProjectPage = ({ data, onBack }: { data: ProjectPageData; onBack: () => vo
           <img 
             src={heroImage} 
             alt={`${titleLine1} ${titleLine2} Hero Mockup`} 
-            className="w-screen min-w-full h-auto object-cover relative z-20 scale-150 origin-top"
+            className="w-screen min-w-full h-auto object-cover relative z-20"
           />
           <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black via-black/80 to-transparent z-30" />
         </motion.div>
