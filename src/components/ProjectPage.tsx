@@ -40,7 +40,7 @@ const ProjectPage = ({ data, onBack }: { data: ProjectPageData; onBack: () => vo
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-10 w-screen flex flex-col items-center justify-center overflow-hidden"
+          className="relative z-10 w-screen flex flex-col items-center justify-center overflow-hidden mt-10 md:mt-16"
         >
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] blur-[150px] pointer-events-none" style={{ backgroundColor: `rgba(${accentRgb}, 0.4)` }} />
           <div className="absolute bottom-[-50px] left-1/2 -translate-x-1/2 w-[80%] h-[100px] blur-[100px] rounded-full pointer-events-none" style={{ backgroundColor: `rgba(${accentRgb}, 0.6)` }} />
