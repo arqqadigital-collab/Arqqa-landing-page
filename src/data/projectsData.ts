@@ -6,9 +6,12 @@ import starlightTablet from "@/assets/starlight-tablet.png";
 import geideaHero from "@/assets/geidea-hero.png";
 import geideaPresentation from "@/assets/geidea-presentation.png";
 import geideaTablet from "@/assets/geidea-tablet.png";
-import gtsHeroImg from "@/assets/gts-hero.png";
-import gtsImg from "@/assets/gts.png";
-import banksImg from "@/assets/banks.png";
+import gtsHero from "@/assets/gts-hero.png";
+import gtsPresentation from "@/assets/gts-presentation.png";
+import gtsTablet from "@/assets/gts-tablet.png";
+import banksHero from "@/assets/banks-hero.png";
+import banksPresentation from "@/assets/banks-presentation.png";
+import banksTablet from "@/assets/banks-tablet.png";
 import directImg from "@/assets/direct.png";
 import clavigermeImg from "@/assets/clavigerme.png";
 import goalngoImg from "@/assets/goalngo.png";
@@ -80,9 +83,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: gtsHeroImg,
-    presentationImage: gtsImg,
-    tabletImage: gtsImg,
+    heroImage: gtsHero,
+    presentationImage: gtsPresentation,
+    tabletImage: gtsTablet,
     accentColor: "from-cyan-500",
     accentRgb: "6, 182, 212",
   },
@@ -103,9 +106,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Search & Discovery–Focused UX",
       "Functional, Trust-Oriented UI Design",
     ],
-    heroImage: banksImg,
-    presentationImage: banksImg,
-    tabletImage: banksImg,
+    heroImage: banksHero,
+    presentationImage: banksPresentation,
+    tabletImage: banksTablet,
     accentColor: "from-indigo-500",
     accentRgb: "99, 102, 241",
   },
