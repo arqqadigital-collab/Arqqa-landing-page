@@ -876,7 +876,7 @@ const CaseStudies = ({ onOpenProject }: { onOpenProject: (id: string) => void })
     { id: "lifelypets", title: "Lifelypets", img: lifelypetsCard, color: "from-blue-600 to-blue-900" },
     {
       id: "starlight",
-      title: "Starlightdevelopments",
+      title: "Starlight Developments",
       img: starlightCard,
       color: "from-purple-600 to-indigo-900",
     },
@@ -884,25 +884,25 @@ const CaseStudies = ({ onOpenProject }: { onOpenProject: (id: string) => void })
     { id: "gts", title: "GTS holding", img: gtsCard, color: "from-cyan-600 to-blue-900" },
     {
       id: "banks",
-      title: "Egyptianbanks",
+      title: "Egyptian Banks",
       img: banksCard,
       color: "from-indigo-600 to-purple-900",
     },
     {
       id: "direct",
-      title: "Directgroup",
+      title: "Direct Group",
       img: directCard,
       color: "from-violet-600 to-fuchsia-900",
     },
     {
       id: "clavigerme",
-      title: "Clavigerme",
+      title: "Claviger Me",
       img: clavigermeCard,
       color: "from-emerald-600 to-teal-900",
     },
     {
       id: "goalngo",
-      title: "Goalngo",
+      title: "Goal N Go",
       img: goalngoCard,
       color: "from-orange-600 to-red-900",
     },
