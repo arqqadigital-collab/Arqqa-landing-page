@@ -866,7 +866,7 @@ const Features = () => {
 
 const CaseStudies = ({ onOpenProject }: { onOpenProject: (id: string) => void }) => {
   const projects = [
-    { id: "lifelypets", title: "Lifelypets", img: { lifelypetsCard }, color: "from-blue-600 to-blue-900" },
+    { id: "lifelypets", title: "Lifelypets", img: lifelypetsCard, color: "from-blue-600 to-blue-900" },
     {
       id: "starlight",
       title: "Starlightdevelopments",
