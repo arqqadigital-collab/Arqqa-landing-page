@@ -1,7 +1,11 @@
 import { ProjectPageData } from "@/components/ProjectPage";
 
-import starlightImg from "@/assets/starlight.png";
-import geideaImg from "@/assets/geidea.png";
+import starlightHero from "@/assets/starlight-hero.png";
+import starlightPresentation from "@/assets/starlight-presentation.png";
+import starlightTablet from "@/assets/starlight-tablet.png";
+import geideaHero from "@/assets/geidea-hero.png";
+import geideaPresentation from "@/assets/geidea-presentation.png";
+import geideaTablet from "@/assets/geidea-tablet.png";
 import gtsHeroImg from "@/assets/gts-hero.png";
 import gtsImg from "@/assets/gts.png";
 import banksImg from "@/assets/banks.png";
@@ -28,9 +32,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Premium User Experience (UX)",
       "Elegant Interface Design (UI)",
     ],
-    heroImage: starlightImg,
-    presentationImage: starlightImg,
-    tabletImage: starlightImg,
+    heroImage: starlightHero,
+    presentationImage: starlightPresentation,
+    tabletImage: starlightTablet,
     accentColor: "from-purple-600",
     accentRgb: "147, 51, 234",
   },
@@ -52,9 +56,9 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Modern, Technology-Driven Interface (UI)",
       "Authority & Trust Framework",
     ],
-    heroImage: geideaImg,
-    presentationImage: geideaImg,
-    tabletImage: geideaImg,
+    heroImage: geideaHero,
+    presentationImage: geideaPresentation,
+    tabletImage: geideaTablet,
     accentColor: "from-gray-500",
     accentRgb: "107, 114, 128",
   },
