@@ -3,6 +3,13 @@ import lifelypetsHero from "@/assets/lifelypets-hero.png";
 import lifelypetsPresentation from "@/assets/lifelypets-presentation.png";
 import lifelypetsTablet from "@/assets/lifelypets-tablet.png";
 import lifelypetsCard from "@/assets/lifelypets-hero.png";
+import starlightCard from "@/assets/starlight-hero.png";
+import geideaCard from "@/assets/geidea-hero.png";
+import gtsCard from "@/assets/gts-hero.png";
+import banksCard from "@/assets/banks-hero.png";
+import directCard from "@/assets/direct-hero.png";
+import clavigermeCard from "@/assets/clavigerme-hero.png";
+import goalngoCard from "@/assets/goalngo-hero.png";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue } from "framer-motion";
 import ProjectPage from "@/components/ProjectPage";
 import { projectsData } from "@/data/projectsData";
@@ -870,33 +877,33 @@ const CaseStudies = ({ onOpenProject }: { onOpenProject: (id: string) => void })
     {
       id: "starlight",
       title: "Starlightdevelopments",
-      img: "https://i.ibb.co/TxVqqSDt/starlight.png",
+      img: starlightCard,
       color: "from-purple-600 to-indigo-900",
     },
-    { id: "geidea", title: "Geidea", img: "https://i.ibb.co/ds0R2JbH/geidea.png", color: "from-gray-700 to-gray-900" },
-    { id: "gts", title: "GTS holding", img: "https://i.ibb.co/d0MhVWx9/gts.png", color: "from-cyan-600 to-blue-900" },
+    { id: "geidea", title: "Geidea", img: geideaCard, color: "from-gray-700 to-gray-900" },
+    { id: "gts", title: "GTS holding", img: gtsCard, color: "from-cyan-600 to-blue-900" },
     {
       id: "banks",
       title: "Egyptianbanks",
-      img: lifelypetsCard,
+      img: banksCard,
       color: "from-indigo-600 to-purple-900",
     },
     {
       id: "direct",
       title: "Directgroup",
-      img: "https://i.ibb.co/VpBCwpd2/direct.png",
+      img: directCard,
       color: "from-violet-600 to-fuchsia-900",
     },
     {
       id: "clavigerme",
       title: "Clavigerme",
-      img: "https://i.ibb.co/qMQttB32/clavigerme.png",
+      img: clavigermeCard,
       color: "from-emerald-600 to-teal-900",
     },
     {
       id: "goalngo",
       title: "Goalngo",
-      img: "https://i.ibb.co/pj419n24/goalngo.png",
+      img: goalngoCard,
       color: "from-orange-600 to-red-900",
     },
   ];
