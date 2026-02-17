@@ -1268,7 +1268,12 @@ const Index = () => {
         {view === "lifelypets" && <LifelyPetsPage key="lifely" onBack={() => setView("home")} />}
 
         {Object.keys(projectsData).includes(view) && (
-          <ProjectPage key={view} data={projectsData[view]} onBack={() => setView("home")} />
+          <ProjectPage key={view} data={projectsData[view]} onBack={() => setView("home")} onBookCall={() => {
+              setView("home");
+              setTimeout(() => {
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }, 600);
+            }} />
         )}
       </AnimatePresence>
     </div>

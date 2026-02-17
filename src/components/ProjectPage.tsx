@@ -19,7 +19,7 @@ export interface ProjectPageData {
   accentRgb: string;
 }
 
-const ProjectPage = ({ data, onBack }: { data: ProjectPageData; onBack: () => void }) => {
+const ProjectPage = ({ data, onBack, onBookCall }: { data: ProjectPageData; onBack: () => void; onBookCall?: () => void }) => {
   const { titleLine1, titleLine2, titleLine2Color, subtitle, subtitleHighlight, paragraphs, solutionItems, heroImage, presentationImage, tabletImage, accentColor, accentRgb } = data;
 
   return (
@@ -161,6 +161,26 @@ const ProjectPage = ({ data, onBack }: { data: ProjectPageData; onBack: () => vo
 
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full blur-[4px] animate-pulse" style={{ backgroundColor: `rgb(${accentRgb})` }} />
         <div className="absolute bottom-1/4 right-1/4 w-3 h-3 rounded-full blur-[6px] animate-pulse" style={{ backgroundColor: `rgb(${accentRgb})` }} />
+      </section>
+
+      {/* --- CTA SECTION --- */}
+      <section className="relative w-full py-24 bg-black">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <button
+            onClick={onBookCall || onBack}
+            className="px-10 py-4 rounded-full bg-[#e63232] hover:bg-[#cc2a2a] text-white font-bold text-lg tracking-wide transition-all shadow-[0_0_30px_rgba(230,50,50,0.4)] hover:shadow-[0_0_40px_rgba(230,50,50,0.6)]"
+          >
+            Book a Free Consultation
+          </button>
+          <a
+            href="https://arqqa.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-4 rounded-full border border-white/20 hover:border-white/50 text-white font-bold text-lg tracking-wide transition-all hover:bg-white/5"
+          >
+            Visit Website
+          </a>
+        </div>
       </section>
     </motion.div>
   );
