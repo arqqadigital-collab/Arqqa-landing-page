@@ -17,10 +17,11 @@ export interface ProjectPageData {
   tabletImage: string;
   accentColor: string;
   accentRgb: string;
+  websiteUrl?: string;
 }
 
 const ProjectPage = ({ data, onBack, onBookCall }: { data: ProjectPageData; onBack: () => void; onBookCall?: () => void }) => {
-  const { titleLine1, titleLine2, titleLine2Color, subtitle, subtitleHighlight, paragraphs, solutionItems, heroImage, presentationImage, tabletImage, accentColor, accentRgb } = data;
+  const { titleLine1, titleLine2, titleLine2Color, subtitle, subtitleHighlight, paragraphs, solutionItems, heroImage, presentationImage, tabletImage, accentColor, accentRgb, websiteUrl } = data;
 
   return (
     <motion.div 
@@ -173,7 +174,7 @@ const ProjectPage = ({ data, onBack, onBookCall }: { data: ProjectPageData; onBa
             Book a Free Consultation
           </button>
           <a
-            href="https://arqqa.net/"
+            href={websiteUrl || "https://arqqa.net/"}
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 rounded-full border border-white/20 hover:border-white/50 text-white font-bold text-lg tracking-wide transition-all hover:bg-white/5"

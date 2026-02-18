@@ -268,7 +268,7 @@ const LifelyPetsPage = ({ onBack, onBookCall }: { onBack: () => void; onBookCall
             Book a Free Consultation
           </button>
           <a
-            href="https://arqqa.net/"
+            href="https://lifelypets.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 rounded-full border border-white/20 hover:border-white/50 text-white font-bold text-lg tracking-wide transition-all hover:bg-white/5"

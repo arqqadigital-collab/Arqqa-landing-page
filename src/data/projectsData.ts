@@ -46,6 +46,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     tabletImage: starlightTablet,
     accentColor: "from-purple-600",
     accentRgb: "147, 51, 234",
+    websiteUrl: "https://starlightdevelopments.com/",
   },
   geidea: {
     titleLine1: "Geidea",
@@ -70,6 +71,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     tabletImage: geideaTablet,
     accentColor: "from-gray-500",
     accentRgb: "107, 114, 128",
+    websiteUrl: "https://geidea.net/",
   },
   gts: {
     titleLine1: "GTS",
@@ -94,6 +96,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     tabletImage: gtsTablet,
     accentColor: "from-cyan-500",
     accentRgb: "6, 182, 212",
+    websiteUrl: "https://gts-holding.com/",
   },
   banks: {
     titleLine1: "Egyptian",
@@ -117,6 +120,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     tabletImage: banksTablet,
     accentColor: "from-indigo-500",
     accentRgb: "99, 102, 241",
+    websiteUrl: "https://egyptianbanks.com/",
   },
   direct: {
     titleLine1: "Direct",
@@ -141,6 +145,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     tabletImage: directTablet,
     accentColor: "from-violet-500",
     accentRgb: "139, 92, 246",
+    websiteUrl: "https://directgroup.sa/",
   },
   clavigerme: {
     titleLine1: "Claviger",
@@ -165,6 +170,7 @@ export const projectsData: Record<string, ProjectPageData> = {
     tabletImage: clavigermeTablet,
     accentColor: "from-emerald-500",
     accentRgb: "16, 185, 129",
+    websiteUrl: "https://clavigerme.com/",
   },
   goalngo: {
     titleLine1: "Goal",
@@ -189,5 +195,6 @@ export const projectsData: Record<string, ProjectPageData> = {
     tabletImage: goalngoTablet,
     accentColor: "from-orange-500",
     accentRgb: "249, 115, 22",
+    websiteUrl: "https://goalngo.com/",
   },
 };
