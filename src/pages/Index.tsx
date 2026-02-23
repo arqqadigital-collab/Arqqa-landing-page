@@ -704,7 +704,16 @@ const Hero = () => {
   );
 };
 
-const clientLogos = [clientLogo1, clientLogo2, clientLogo3, clientLogo4, clientLogo5, clientLogo6, clientLogo7, clientLogo8];
+const clientLogos = [
+  clientLogo1,
+  clientLogo2,
+  clientLogo3,
+  clientLogo4,
+  clientLogo5,
+  clientLogo6,
+  clientLogo7,
+  clientLogo8,
+];
 
 const Clients = () => {
   return (
@@ -729,7 +738,7 @@ const Clients = () => {
                     src={logo}
                     alt={`Client logo ${i + 1}`}
                     className={`w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300 ${
-                      i === 1 || i === 4 ? "h-8 md:h-10" : "h-6 md:h-8"
+                      i === 1 || i === 4 ? "h-8 md:h-8" : "h-6 md:h-8"
                     }`}
                   />
                 ))}
@@ -1297,20 +1306,31 @@ const Index = () => {
           />
         )}
 
-        {view === "lifelypets" && <LifelyPetsPage key="lifely" onBack={() => setView("home")} onBookCall={() => {
+        {view === "lifelypets" && (
+          <LifelyPetsPage
+            key="lifely"
+            onBack={() => setView("home")}
+            onBookCall={() => {
               setView("home");
               setTimeout(() => {
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
               }, 600);
-            }} />}
+            }}
+          />
+        )}
 
         {Object.keys(projectsData).includes(view) && (
-          <ProjectPage key={view} data={projectsData[view]} onBack={() => setView("home")} onBookCall={() => {
+          <ProjectPage
+            key={view}
+            data={projectsData[view]}
+            onBack={() => setView("home")}
+            onBookCall={() => {
               setView("home");
               setTimeout(() => {
                 document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
               }, 600);
-            }} />
+            }}
+          />
         )}
       </AnimatePresence>
     </div>
