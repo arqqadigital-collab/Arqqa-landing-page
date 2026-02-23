@@ -728,7 +728,9 @@ const Clients = () => {
                     key={i}
                     src={logo}
                     alt={`Client logo ${i + 1}`}
-                    className="h-6 md:h-8 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
+                    className={`w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300 ${
+                      i === 1 || i === 4 ? "h-8 md:h-10" : "h-6 md:h-8"
+                    }`}
                   />
                 ))}
               </div>
