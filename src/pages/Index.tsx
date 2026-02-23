@@ -11,6 +11,14 @@ import directCard from "@/assets/direct-card.png";
 import clavigermeCard from "@/assets/clavigerme-card.webp";
 import goalngoCard from "@/assets/goalngo-card.png";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue } from "framer-motion";
+import clientLogo1 from "@/assets/client-logo-1.png";
+import clientLogo2 from "@/assets/client-logo-2.png";
+import clientLogo3 from "@/assets/client-logo-3.png";
+import clientLogo4 from "@/assets/client-logo-4.png";
+import clientLogo5 from "@/assets/client-logo-5.png";
+import clientLogo6 from "@/assets/client-logo-6.png";
+import clientLogo7 from "@/assets/client-logo-7.png";
+import clientLogo8 from "@/assets/client-logo-8.png";
 import ProjectPage from "@/components/ProjectPage";
 import { projectsData } from "@/data/projectsData";
 import {
@@ -696,6 +704,8 @@ const Hero = () => {
   );
 };
 
+const clientLogos = [clientLogo1, clientLogo2, clientLogo3, clientLogo4, clientLogo5, clientLogo6, clientLogo7, clientLogo8];
+
 const Clients = () => {
   return (
     <section className="py-12 border-y border-white/5 bg-black relative overflow-hidden z-20">
@@ -707,19 +717,19 @@ const Clients = () => {
         </div>
         <div className="md:w-3/4 w-full relative overflow-hidden">
           <motion.div
-            className="flex gap-16 items-center w-max"
+            className="flex gap-12 md:gap-16 items-center w-max"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           >
             {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex gap-16 items-center">
-                {["Stripe", "Klarna.", "Shopify", "Revolut", "Block", "Monzo", "Wise", "Coinbase"].map((name, i) => (
-                  <span
+              <div key={setIndex} className="flex gap-12 md:gap-16 items-center">
+                {clientLogos.map((logo, i) => (
+                  <img
                     key={i}
-                    className="text-2xl md:text-3xl font-black text-white/20 uppercase italic tracking-tighter hover:text-white transition-colors"
-                  >
-                    {name}
-                  </span>
+                    src={logo}
+                    alt={`Client logo ${i + 1}`}
+                    className="h-6 md:h-8 w-auto object-contain opacity-40 hover:opacity-100 transition-opacity duration-300"
+                  />
                 ))}
               </div>
             ))}
