@@ -12,7 +12,6 @@ import gtsTablet from "@/assets/gts-tablet.png";
 import banksHero from "@/assets/banks-hero.png";
 import banksPresentation from "@/assets/banks-presentation.png";
 import banksTablet from "@/assets/banks-tablet.png";
-import directHero from "@/assets/direct-hero.webp";
 import directPresentation from "@/assets/direct-presentation.png";
 import directTablet from "@/assets/direct-tablet.png";
 import clavigermeHero from "@/assets/clavigerme-hero.png";
@@ -140,7 +139,7 @@ export const projectsData: Record<string, ProjectPageData> = {
       "Professional Interface Design (UI)",
       "Trust & Credibility Signals",
     ],
-    heroImage: directHero,
+    heroImage: "",
     presentationImage: directPresentation,
     tabletImage: directTablet,
     accentColor: "from-violet-500",
