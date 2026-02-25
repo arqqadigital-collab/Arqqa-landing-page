@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import philosophyImage from "@/assets/philosophy.jpg";
 import lifelypetsHero from "@/assets/lifelypets-hero.png";
 import lifelypetsPresentation from "@/assets/lifelypets-presentation.png";
 import lifelypetsTablet from "@/assets/lifelypets-tablet.png";
@@ -796,7 +797,7 @@ const Philosophy = () => (
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <ConsultationVisual />
+          <img src={philosophyImage} alt="Consultation" className="w-full h-auto rounded-2xl shadow-2xl" />
         </motion.div>
       </div>
     </div>
