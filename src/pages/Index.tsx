@@ -747,7 +747,7 @@ const Clients = () => {
           <motion.div
             className="flex gap-12 md:gap-16 items-center w-max"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
           >
             {[...Array(2)].map((_, setIndex) => (
               <div key={setIndex} className="flex gap-12 md:gap-16 items-center">
