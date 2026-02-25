@@ -357,7 +357,7 @@ const ConsultationVisual = () => {
   return (
     <div className="relative w-full aspect-square rounded-[2.5rem] overflow-hidden border border-white/10 group bg-zinc-900">
       <img
-        src="https://i.ibb.co/G4WkHc8Q/consultant-photo.png"
+        src={philosophyImage}
         alt="Tech Consultant"
         className="w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-all duration-700 brightness-75 contrast-110 saturate-[0.8]"
       />
@@ -797,7 +797,7 @@ const Philosophy = () => (
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <img src={philosophyImage} alt="Consultation" className="w-full h-auto rounded-2xl shadow-2xl" />
+          <ConsultationVisual />
         </motion.div>
       </div>
     </div>
