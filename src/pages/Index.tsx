@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import philosophyImage from "@/assets/philosophy.jpg";
+import philosophyImage from "@/assets/philosophy.png";
 import lifelypetsHero from "@/assets/lifelypets-hero.png";
 import lifelypetsPresentation from "@/assets/lifelypets-presentation.png";
 import lifelypetsTablet from "@/assets/lifelypets-tablet.png";
