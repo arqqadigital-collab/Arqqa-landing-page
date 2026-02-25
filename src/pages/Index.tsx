@@ -1185,7 +1185,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="full_name"
-            placeholder="John Doe"
+            placeholder="Full Name"
             required
             className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50"
           />
@@ -1195,7 +1195,7 @@ const ContactForm = () => {
           <input
             type="tel"
             name="mobile"
-            placeholder="+1 (555) 000-0000"
+            placeholder="+20 1XXXXXXXXXX"
             className="w-full bg-white/[0.03] border border-white/10 rounded-2xl py-4 px-6 text-white focus:outline-none focus:ring-1 focus:ring-red-500/50"
           />
         </div>
