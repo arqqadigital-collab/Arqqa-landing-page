@@ -20,6 +20,15 @@ import clientLogo5 from "@/assets/client-logo-5.png";
 import clientLogo6 from "@/assets/client-logo-6.png";
 import clientLogo7 from "@/assets/client-logo-7.png";
 import clientLogo8 from "@/assets/client-logo-8.png";
+import clientLogo9 from "@/assets/client-logo-9.png";
+import clientLogo10 from "@/assets/client-logo-10.png";
+import clientLogo11 from "@/assets/client-logo-11.png";
+import clientLogo12 from "@/assets/client-logo-12.png";
+import clientLogo13 from "@/assets/client-logo-13.png";
+import clientLogo14 from "@/assets/client-logo-14.png";
+import clientLogo15 from "@/assets/client-logo-15.png";
+import clientLogo16 from "@/assets/client-logo-16.png";
+import clientLogo17 from "@/assets/client-logo-17.png";
 import ProjectPage from "@/components/ProjectPage";
 import { projectsData } from "@/data/projectsData";
 import {
@@ -714,6 +723,15 @@ const clientLogos = [
   clientLogo6,
   clientLogo7,
   clientLogo8,
+  clientLogo9,
+  clientLogo10,
+  clientLogo11,
+  clientLogo12,
+  clientLogo13,
+  clientLogo14,
+  clientLogo15,
+  clientLogo16,
+  clientLogo17,
 ];
 
 const Clients = () => {
