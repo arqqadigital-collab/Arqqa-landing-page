@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import philosophyImage from "@/assets/philosophy.png";
 import lifelypetsHero from "@/assets/lifelypets-hero.png";
 import lifelypetsPresentation from "@/assets/lifelypets-presentation.png";
@@ -1149,6 +1150,7 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -1161,9 +1163,8 @@ const ContactForm = () => {
         body: formData,
       });
       if (res.ok) {
-        setSubmitted(true);
         formRef.current?.reset();
-        setTimeout(() => setSubmitted(false), 4000);
+        navigate("/thank-you");
       } else {
         console.error("FormSubmit error:", await res.text());
       }
