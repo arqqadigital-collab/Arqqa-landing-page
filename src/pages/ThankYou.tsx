@@ -14,7 +14,7 @@ const ThankYou = () => {
 
     if (typeof window !== "undefined") {
       (window as any).gtag("event", "conversion", {
-        send_to: "AW-17994872971/XXXXXXX",
+        send_to: "AW-17994872971/EXKMCMKClIMcEIvxz4RD",
       });
     }
 
