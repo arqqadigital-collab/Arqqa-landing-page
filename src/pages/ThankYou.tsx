@@ -12,7 +12,7 @@ const ThankYou = () => {
     (window as any).dataLayer = (window as any).dataLayer || [];
     (window as any).dataLayer.push({ event: "thank_you_page_view" });
 
-    if (typeof window !== "undefined") {
+    if (typeof (window as any).gtag === "function") {
       (window as any).gtag("event", "conversion", {
         send_to: "AW-17994872971/EXKMCMKClIMcEIvxz4RD",
       });
