@@ -11,6 +11,13 @@ const ThankYou = () => {
   useEffect(() => {
     (window as any).dataLayer = (window as any).dataLayer || [];
     (window as any).dataLayer.push({ event: "thank_you_page_view" });
+
+    if (typeof window !== "undefined") {
+      (window as any).gtag("event", "conversion", {
+        send_to: "AW-17994872971/XXXXXXX",
+      });
+    }
+
     window.scrollTo(0, 0);
   }, []);
 
@@ -96,9 +103,7 @@ const ThankYou = () => {
                 className="group relative px-10 py-4 rounded-full font-bold text-white bg-red-600 shadow-[0_0_20px_rgba(220,38,38,0.3)] overflow-hidden transition-all duration-300"
               >
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  Back to Home
-                </span>
+                <span className="relative z-10 flex items-center justify-center gap-2">Back to Home</span>
               </motion.button>
             </motion.div>
           </motion.div>
