@@ -1100,7 +1100,7 @@ const Testimonials = () => {
   const repeated = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-32 bg-black overflow-hidden relative border-t border-white/5">
+    <section>
       {/* <div className="container mx-auto px-6 relative z-10 text-center mb-20">
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tighter">
           We Have Done This Before
