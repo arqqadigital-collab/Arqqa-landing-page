@@ -1100,49 +1100,49 @@ const Testimonials = () => {
   const repeated = [...testimonials, ...testimonials];
 
   return (
-    // <section className="py-32 bg-black overflow-hidden relative border-t border-white/5">
-    //   <div className="container mx-auto px-6 relative z-10 text-center mb-20">
-    //     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tighter">
-    //       We Have Done This Before
-    //     </h2>
-    //   </div>
-    //   <div className="relative flex overflow-hidden">
-    //     <motion.div
-    //       className="flex gap-8 py-10"
-    //       animate={{ x: [0, "-50%"] }}
-    //       transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-    //     >
-    //       {repeated.map((t, i) => (
-    //         <div
-    //           key={i}
-    //           className="relative w-[350px] md:w-[400px] h-[450px] p-8 rounded-[2rem] bg-white/5 border border-white/10 flex flex-col justify-between overflow-hidden group shrink-0 backdrop-blur-3xl"
-    //         >
-    //           <div
-    //             className={`absolute bottom-[-10%] left-[-10%] w-[70%] h-[70%] bg-gradient-to-tr ${t.gradient} blur-[90px] opacity-40 rounded-full pointer-events-none`}
-    //           />
-    //           <div className="relative z-10">
-    //             <div className="flex items-center gap-3 mb-8">
-    //               <t.logo className="w-8 h-8 text-white" />
-    //               <span className="text-2xl font-bold text-white tracking-tight">{t.company}</span>
-    //             </div>
-    //             <p className="text-xl text-white/90 font-medium leading-relaxed whitespace-normal">"{t.text}"</p>
-    //           </div>
-    //           <div className="relative z-10 flex items-center gap-4 mt-8 pt-8 border-t border-white/10">
-    //             <img
-    //               src={t.img}
-    //               alt={t.author}
-    //               className="w-12 h-12 rounded-xl object-cover grayscale ring-2 ring-white/10"
-    //             />
-    //             <div>
-    //               <p className="text-white font-bold text-sm tracking-wide">{t.author}</p>
-    //               <p className="text-white/60 text-xs uppercase tracking-wide font-medium">{t.role}</p>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       ))}
-    //     </motion.div>
-    //   </div>
-    // </section>
+    <section className="py-32 bg-black overflow-hidden relative border-t border-white/5">
+      <div className="container mx-auto px-6 relative z-10 text-center mb-20">
+        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tighter">
+          We Have Done This Before
+        </h2>
+      </div>
+      <div className="relative flex overflow-hidden">
+        <motion.div
+          className="flex gap-8 py-10"
+          animate={{ x: [0, "-50%"] }}
+          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        >
+          {repeated.map((t, i) => (
+            <div
+              key={i}
+              className="relative w-[350px] md:w-[400px] h-[450px] p-8 rounded-[2rem] bg-white/5 border border-white/10 flex flex-col justify-between overflow-hidden group shrink-0 backdrop-blur-3xl"
+            >
+              <div
+                className={`absolute bottom-[-10%] left-[-10%] w-[70%] h-[70%] bg-gradient-to-tr ${t.gradient} blur-[90px] opacity-40 rounded-full pointer-events-none`}
+              />
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-8">
+                  <t.logo className="w-8 h-8 text-white" />
+                  <span className="text-2xl font-bold text-white tracking-tight">{t.company}</span>
+                </div>
+                <p className="text-xl text-white/90 font-medium leading-relaxed whitespace-normal">"{t.text}"</p>
+              </div>
+              <div className="relative z-10 flex items-center gap-4 mt-8 pt-8 border-t border-white/10">
+                <img
+                  src={t.img}
+                  alt={t.author}
+                  className="w-12 h-12 rounded-xl object-cover grayscale ring-2 ring-white/10"
+                />
+                <div>
+                  <p className="text-white font-bold text-sm tracking-wide">{t.author}</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wide font-medium">{t.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 
