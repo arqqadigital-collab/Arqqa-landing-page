@@ -1058,93 +1058,93 @@ const Process = ({ onNavigate }: { onNavigate: () => void }) => {
   );
 };
 
-// const Testimonials = () => {
-//   const testimonials = [
-//     {
-//       company: "Company",
-//       logo: Layers,
-//       text: "Real-time insights from AI agents help us spot trends before they emerge.",
-//       author: "Jamal Richardson",
-//       role: "Head of Analytics",
-//       img: "https://i.pravatar.cc/150?u=jamal",
-//       gradient: "from-blue-500 to-purple-500",
-//     },
-//     {
-//       company: "Logoipsum",
-//       logo: Globe,
-//       text: "Seamless Slack and Salesforce integrations keep our team in sync. Fusion AI is vital.",
-//       author: "Priya Desai",
-//       role: "Customer Success Manager",
-//       img: "https://i.pravatar.cc/150?u=priya",
-//       gradient: "from-orange-500 to-red-500",
-//     },
-//     {
-//       company: "Venture",
-//       logo: Zap,
-//       text: "Automated workflows have cut our manual data entry by 80%. Exceptional partner.",
-//       author: "Mat Mursmark",
-//       role: "Chief Growth Officer",
-//       img: "https://i.pravatar.cc/150?u=mat",
-//       gradient: "from-emerald-500 to-teal-500",
-//     },
-//     {
-//       company: "Apex",
-//       logo: BarChart3,
-//       text: "Scalability was our biggest concern, but this architecture handled 10x growth.",
-//       author: "Sarah Jenkins",
-//       role: "CTO",
-//       img: "https://i.pravatar.cc/150?u=sarah",
-//       gradient: "from-indigo-500 to-blue-500",
-//     },
-//   ];
-//   const repeated = [...testimonials, ...testimonials];
+const Testimonials = () => {
+  const testimonials = [
+    {
+      company: "Company",
+      logo: Layers,
+      text: "Real-time insights from AI agents help us spot trends before they emerge.",
+      author: "Jamal Richardson",
+      role: "Head of Analytics",
+      img: "https://i.pravatar.cc/150?u=jamal",
+      gradient: "from-blue-500 to-purple-500",
+    },
+    {
+      company: "Logoipsum",
+      logo: Globe,
+      text: "Seamless Slack and Salesforce integrations keep our team in sync. Fusion AI is vital.",
+      author: "Priya Desai",
+      role: "Customer Success Manager",
+      img: "https://i.pravatar.cc/150?u=priya",
+      gradient: "from-orange-500 to-red-500",
+    },
+    {
+      company: "Venture",
+      logo: Zap,
+      text: "Automated workflows have cut our manual data entry by 80%. Exceptional partner.",
+      author: "Mat Mursmark",
+      role: "Chief Growth Officer",
+      img: "https://i.pravatar.cc/150?u=mat",
+      gradient: "from-emerald-500 to-teal-500",
+    },
+    {
+      company: "Apex",
+      logo: BarChart3,
+      text: "Scalability was our biggest concern, but this architecture handled 10x growth.",
+      author: "Sarah Jenkins",
+      role: "CTO",
+      img: "https://i.pravatar.cc/150?u=sarah",
+      gradient: "from-indigo-500 to-blue-500",
+    },
+  ];
+  const repeated = [...testimonials, ...testimonials];
 
-//   return (
-//     <section className="py-32 bg-black overflow-hidden relative border-t border-white/5">
-//       <div className="container mx-auto px-6 relative z-10 text-center mb-20">
-//         <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tighter">
-//           We Have Done This Before
-//         </h2>
-//       </div>
-//       <div className="relative flex overflow-hidden">
-//         <motion.div
-//           className="flex gap-8 py-10"
-//           animate={{ x: [0, "-50%"] }}
-//           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-//         >
-//           {repeated.map((t, i) => (
-//             <div
-//               key={i}
-//               className="relative w-[350px] md:w-[400px] h-[450px] p-8 rounded-[2rem] bg-white/5 border border-white/10 flex flex-col justify-between overflow-hidden group shrink-0 backdrop-blur-3xl"
-//             >
-//               <div
-//                 className={`absolute bottom-[-10%] left-[-10%] w-[70%] h-[70%] bg-gradient-to-tr ${t.gradient} blur-[90px] opacity-40 rounded-full pointer-events-none`}
-//               />
-//               <div className="relative z-10">
-//                 <div className="flex items-center gap-3 mb-8">
-//                   <t.logo className="w-8 h-8 text-white" />
-//                   <span className="text-2xl font-bold text-white tracking-tight">{t.company}</span>
-//                 </div>
-//                 <p className="text-xl text-white/90 font-medium leading-relaxed whitespace-normal">"{t.text}"</p>
-//               </div>
-//               <div className="relative z-10 flex items-center gap-4 mt-8 pt-8 border-t border-white/10">
-//                 <img
-//                   src={t.img}
-//                   alt={t.author}
-//                   className="w-12 h-12 rounded-xl object-cover grayscale ring-2 ring-white/10"
-//                 />
-//                 <div>
-//                   <p className="text-white font-bold text-sm tracking-wide">{t.author}</p>
-//                   <p className="text-white/60 text-xs uppercase tracking-wide font-medium">{t.role}</p>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// };
+  return (
+    // <section className="py-32 bg-black overflow-hidden relative border-t border-white/5">
+    //   <div className="container mx-auto px-6 relative z-10 text-center mb-20">
+    //     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tighter">
+    //       We Have Done This Before
+    //     </h2>
+    //   </div>
+    //   <div className="relative flex overflow-hidden">
+    //     <motion.div
+    //       className="flex gap-8 py-10"
+    //       animate={{ x: [0, "-50%"] }}
+    //       transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+    //     >
+    //       {repeated.map((t, i) => (
+    //         <div
+    //           key={i}
+    //           className="relative w-[350px] md:w-[400px] h-[450px] p-8 rounded-[2rem] bg-white/5 border border-white/10 flex flex-col justify-between overflow-hidden group shrink-0 backdrop-blur-3xl"
+    //         >
+    //           <div
+    //             className={`absolute bottom-[-10%] left-[-10%] w-[70%] h-[70%] bg-gradient-to-tr ${t.gradient} blur-[90px] opacity-40 rounded-full pointer-events-none`}
+    //           />
+    //           <div className="relative z-10">
+    //             <div className="flex items-center gap-3 mb-8">
+    //               <t.logo className="w-8 h-8 text-white" />
+    //               <span className="text-2xl font-bold text-white tracking-tight">{t.company}</span>
+    //             </div>
+    //             <p className="text-xl text-white/90 font-medium leading-relaxed whitespace-normal">"{t.text}"</p>
+    //           </div>
+    //           <div className="relative z-10 flex items-center gap-4 mt-8 pt-8 border-t border-white/10">
+    //             <img
+    //               src={t.img}
+    //               alt={t.author}
+    //               className="w-12 h-12 rounded-xl object-cover grayscale ring-2 ring-white/10"
+    //             />
+    //             <div>
+    //               <p className="text-white font-bold text-sm tracking-wide">{t.author}</p>
+    //               <p className="text-white/60 text-xs uppercase tracking-wide font-medium">{t.role}</p>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       ))}
+    //     </motion.div>
+    //   </div>
+    // </section>
+  );
+};
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
